@@ -1,0 +1,73 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Screen control */
+.screen {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* First screen */
+#start-screen {
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+#click-btn {
+  font-size: 2.5rem;
+  padding: 1.2rem 3rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+#click-btn:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+/* Second screen */
+#image-screen {
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/* Big central GIF */
+.center-gif {
+  width: 80vw;
+  max-width: 900px;
+  height: auto;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
